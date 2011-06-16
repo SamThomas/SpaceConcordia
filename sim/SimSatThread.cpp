@@ -6,7 +6,7 @@ SimSatThread::SimSatThread()
   isRunning = false;
 }
 
-SimsSatThread::run()
+void SimSatThread::run()
 {
 
   if(isRunning)

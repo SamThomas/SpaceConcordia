@@ -3,11 +3,6 @@
 
 #include <stdio.h>
 
-extern "C" 
-{
-#include "core.h"
-}
-
 #include "ui_SimSat.h"
 
 #include <QMainWindow>

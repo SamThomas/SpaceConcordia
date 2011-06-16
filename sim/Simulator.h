@@ -1,3 +1,6 @@
+#ifndef _SIMU_H_
+#define _SIMU_H_
+
 #include <stdarg.h>
 
 #include <QObject>
@@ -37,3 +40,5 @@ class Simulator : public QObject
   QMainWindow *window;
   
 };
+
+#endif

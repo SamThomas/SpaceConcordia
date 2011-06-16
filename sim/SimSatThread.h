@@ -1,5 +1,12 @@
+#ifndef _SS_THREAD_
+#define _SS_THREAD_
+
 #include <QThread>
+
+extern "C"{
 #include "core.h"
+}
+
 
 class SimSatThread : public QThread
 {
@@ -10,4 +17,6 @@ class SimSatThread : public QThread
  private:
   long long cycles;
   bool isRunning;
-}
+};
+
+#endif
