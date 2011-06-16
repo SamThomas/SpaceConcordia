@@ -1,7 +1,9 @@
 #include "comms.h"
 
-// utils 
-#include "rand.h"
+/** The buffer used for receiving stuff. */
+char* comms_buffer; 
+uint32_t comms_checksum; 
+
 
 void comms_exec()
 {

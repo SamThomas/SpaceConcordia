@@ -9,9 +9,8 @@
 // modules
 #include "zerog_module.h"
 
-/** The buffer used for receiving stuff. */
-char* comms_buffer; 
-uint32_t comms_checksum; 
+// utils 
+#include "rand.h"
 
 void comms_exec();
 

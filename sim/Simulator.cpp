@@ -5,6 +5,9 @@ Simulator::Simulator()
   //we start in the non running state
   simRunning = false;
 
+  //create our satellite object
+  satellite = new SimSatThread();
+
   //create our main window object
   window = new QMainWindow();
 
@@ -37,12 +40,16 @@ void Simulator::_simprintf(char * fmt, ...)
 
 void Simulator::simStart()
 {
-  _simprintf((char *)"herp\n");
+  satellite->setRunState(true);
+
+  if(!satellite->isRunning())
+    satellite->start();
+
 }
 
 void Simulator::simStop()
 {
-  _simprintf((char *)"derp\n");
+  satellite->setRunState(false);
 }
 
 

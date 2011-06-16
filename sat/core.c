@@ -35,19 +35,18 @@ void core_loop()//(int argc, char ** argv)
   //super simple scheduler - NOTE : I'm reducing this for the momment. 
   setSleepDuration(1);
 
-  while(1){
-    int cSched;
-    printf("\n");
-    zerog_print();
-    lowPowerSleep();
-    printf("Beep!\n");
-    for(cSched=0; cSched<8; cSched++){
-      if(schedule[cSched])
-	schedule[cSched]->run();
-    }
-    zerog_cycle(); 
-    setSleepDuration(1);
+  int cSched;
+  printf("\n");
+  zerog_print();
+  lowPowerSleep();
+  printf("Beep!\n");
+  for(cSched=0; cSched<8; cSched++){
+    if(schedule[cSched])
+      schedule[cSched]->run();
   }
+  zerog_cycle(); 
+  setSleepDuration(1);
+
 
   //return 0;
 }

@@ -16,7 +16,7 @@ class SimSatThread : public QThread
   void setRunState(bool running);
  private:
   long long cycles;
-  bool isRunning;
+  bool runState;
 };
 
 #endif

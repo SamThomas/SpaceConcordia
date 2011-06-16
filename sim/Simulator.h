@@ -7,6 +7,7 @@
 #include <QMainWindow>
 
 #include "ui_SimSat.h"
+#include "SimSatThread.h"
 
 class Simulator : public QObject
 {
@@ -38,7 +39,9 @@ class Simulator : public QObject
 
   //UI master object
   QMainWindow *window;
-  
+
+  SimSatThread *satellite;
+
 };
 
 #endif
